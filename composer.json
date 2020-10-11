@@ -9,5 +9,6 @@
             "name": "Joe Moses",
             "email": "info@joemoses.co.uk"
         }
-    ]
+    ],
+    "minimum-stability": "dev"
 }

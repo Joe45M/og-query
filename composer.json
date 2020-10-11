@@ -1,5 +1,6 @@
 {
     "name": "joem/og-query",
+    "license": "MIT",
     "require": {
         "symfony/http-client": "^5.1"
     },

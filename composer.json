@@ -1,0 +1,14 @@
+{
+  "name": "joem/og-query",
+  "license": "MIT",
+  "require": {
+    "symfony/http-client": "^5.1"
+  },
+  "authors": [
+    {
+      "name": "Joe Moses",
+      "email": "info@joemoses.co.uk"
+    }
+  ],
+  "minimum-stability": "dev"
+}

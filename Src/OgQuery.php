@@ -1,6 +1,8 @@
 <?php
-namespace joem\OgQuery;
 
+namespace Src;
+
+use DOMDocument;
 use Symfony\Component\HttpClient\HttpClient;
 class OgQuery {
     private $HttpClient;

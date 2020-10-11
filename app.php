@@ -12,12 +12,6 @@
 require 'vendor/autoload.php';
 
 /**
- * Include the meat - OgQuery class is the engine.
- */
-
-require './OgQuery.php';
-
-/**
  * Get the URL you'd like to check - should be a FQDN.
  */
 $url = $_GET['url'] ?? false;
@@ -30,6 +24,9 @@ if(!$url) {
  * Fire up the query class.
  */
 
+use Src\OgQuery;
+
+$Query = new OgQuery();
 
 /**
  * Get your meta tags.

@@ -4,6 +4,11 @@
   "require": {
     "symfony/http-client": "^5.1"
   },
+  "autoload": {
+    "psr-4": {
+      "Src\\": "Src/"
+    }
+  },
   "authors": [
     {
       "name": "Joe Moses",

@@ -34,19 +34,54 @@ class OgQuery {
 
     /**
      * Execute the request and store the request content.
-     * @return $this
+     *
+     * Call $this::search, which will return results, ending
+     * the chain.
+     * @return array result of $this::search.
      */
     public function execute() {
         $response = $this->HttpClient->request('GET', $this->getEndpoint());
 
         $this->setResponseContent($response->getContent());
-
-        return $this;
+        return $this->search();
     }
 
     /**
-     * Set a list of meta tags to return from the
-     * request.
+     * Search the document for specified meta tags, this is the last
+     * stop in the chain - or should be.
+     *
+     * - Create DOMDocument
+     * - Load result
+     * - Loop meta
+     * - - If meta property is in array of els to return, match it.
+     * - return matches.
+     *
+     * NOTE: this only searches for meta elements which are name or property.
+     *
+     * @return array
+     */
+    public function search() {
+
+        $matches = [];
+        $Dom = new DOMDocument();
+        $Dom->loadHTML($this->responseContent);
+
+        foreach ($Dom->getElementsByTagName('meta') as $tag) {
+            $current_tag = $tag->getAttribute('property');
+            (empty($current_tag) ? $current_tag = $tag->getAttribute('name') : '');
+
+            $should_return_this_tag  = in_array($current_tag, $this->metaTagsToReturn);
+
+            if ($should_return_this_tag) {
+                $matches[$current_tag] = $tag->getAttribute('content');
+            }
+        }
+        return json_encode($matches);
+    }
+
+    /**
+     * Set a list of meta tags to return from the request.
+     * Identifier must be a name or property value.
      * @param array $tags
      */
     public function meta_tags(Array $tags = [])

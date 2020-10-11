@@ -1,6 +1,12 @@
 {
-
+    "name": "joem/og-query",
     "require": {
         "symfony/http-client": "^5.1"
-    }
+    },
+    "authors": [
+        {
+            "name": "Joe Moses",
+            "email": "info@joemoses.co.uk"
+        }
+    ]
 }

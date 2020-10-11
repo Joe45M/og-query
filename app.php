@@ -36,5 +36,6 @@ $Query = new OgQuery();
  */
 $result = $Query
     ->endpoint($url)
+
     ->meta_tags(['og:title', 'og:site_name', 'og:description'])
     ->execute();

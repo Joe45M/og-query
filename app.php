@@ -29,7 +29,7 @@ if(!$url) {
 /**
  * Fire up the query class.
  */
-$Query = new OgQuery();
+
 
 /**
  * Get your meta tags.

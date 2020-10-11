@@ -1,7 +1,7 @@
 <?php
+namespace joem\OgQuery;
 
 use Symfony\Component\HttpClient\HttpClient;
-
 class OgQuery {
     private $HttpClient;
     private $endpoint;

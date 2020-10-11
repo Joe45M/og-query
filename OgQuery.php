@@ -60,7 +60,7 @@ class OgQuery {
      *
      * @return array
      */
-    public function search() {
+    private function search() {
 
         $matches = [];
         $Dom = new DOMDocument();
@@ -76,6 +76,7 @@ class OgQuery {
                 $matches[$current_tag] = $tag->getAttribute('content');
             }
         }
+
         return json_encode($matches);
     }
 

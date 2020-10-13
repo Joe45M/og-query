@@ -1,6 +1,6 @@
 <?php
 
-namespace Joem;
+namespace joem\OgQuery;
 
 use DOMDocument;
 use Symfony\Component\HttpClient\HttpClient;

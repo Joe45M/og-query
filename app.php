@@ -23,10 +23,13 @@ if(!$url) {
 /**
  * Fire up the query class.
  */
+//
+// use Src\OgQuery;
+//
+// $Query = new OgQuery();
 
-use Src\OgQuery;
 
-$Query = new OgQuery();
+\Joem\OgQuery::
 
 /**
  * Get your meta tags.

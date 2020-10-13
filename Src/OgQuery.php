@@ -1,6 +1,6 @@
 <?php
 
-namespace Src;
+namespace Joem;
 
 use DOMDocument;
 use Symfony\Component\HttpClient\HttpClient;

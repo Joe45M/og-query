@@ -6,7 +6,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Src\\": "Src/"
+      "OgQuery\\": ""
     }
   },
   "authors": [
